@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Sidebar Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #81b3a8;
+        }
+
+        /* Styling for the sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background-color: #1c6648;
+            color: #fff;
+            padding: 20px;
+
+        }
+
+        /* Styling for sidebar buttons */
+        .sidebar button {
+            font-size: 18px;
+            display: block;
+            width: 100%;
+            background: none;
+            border: none;
+            color: #080808;
+            padding: 10px;
+            text-align: left;
+            cursor: pointer;
+            margin-top: 50px;
+
+            /* Adjust button position manually */
+            position: relative; /* Use relative positioning for the button */
+            top: 20; /* Move the button down by 50% of its parent's height */
+            transform: translateY(-50%); /* Adjust to vertically center the button */
+        }
+
+        .sidebar button:hover {
+            background-color: #0a7237;
+        }
+
+        .main-content {
+            margin-left: 100px; /* Adjust to match the sidebar width */
+            padding: 70px; /* Add padding to separate content from sidebar */
+            
+        }
+
+        .container {
+            /* Container styling */
+            border: 1px solid #cccccc;
+            padding: 50px;
+            background-color: #5cac9a;
+            height: 1000px;
+        }
+
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding: 10px;
+            }
+
+            .content {
+                margin-left: 0;
+            }
+        }
+
+        table {
+            background-color: #a0eec7;
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* Styling for Doctor label */
+        .Doctor {
+            color: #080808;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 100px;
+            position: relative;
+            }
+        .Doctor::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #080808;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+        .Greet {
+            color: #080808;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 10px;
+            position: relative;
+            margin-bottom: 50px;
+            }
+
+        .All-Patient {
+            font-size: 30px;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: -40px;
+            text-align: left; /* Align the search bar to the right */
+        }
+
+        .search-bar {
+            text-align: right; /* Align the search bar to the right */
+            margin-bottom: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 8px; /* Adjust padding */
+            width: 200px; /* Adjust width */
+            height: 30px; /* Adjust height */
+            font-size: 14px; /* Adjust font size */
+            border-radius: 10px;
+        }
+        
+        .settings-icon {
+            position: absolute; /* Change to absolute positioning */
+            top: 20px; /* Move the icon to the top */
+            right: 30px;
+            width: 32px; /* Adjust icon width */
+            height: 32px; /* Adjust icon height */
+            cursor: pointer;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="Greet">Good Morning!</div>
+        <div class="Doctor">Doc. Ryan</div>
+        
+        <div class="Buttons">
+        <button>Overview</button>
+        <button>Patients</button>
+        <button>Collaborator</button>
+        <button>On Going Patient</button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="All-Patient">All Patients</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+            </div>
+            <!-- Content within the container -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Last Checkup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>30</td>
+                        <td>2023-08-15</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>25</td>
+                        <td>2023-07-20</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="settings-icon">
+        <img src="Photos/Settings.png" alt="Settings Icon">
+    </div>
+</body>
+</html>
