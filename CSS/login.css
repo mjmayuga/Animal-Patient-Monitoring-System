@@ -4,9 +4,8 @@
 	max-width: 1500px;
 	background-image: url('../Photos/Swirl.png'), url('../Photos/Dog.png');
 	background-position: 0px 330px, -8px 20px;
-	background-position: fixed;
 	background-repeat: no-repeat;
-	background-size: auto 60%, 30% 100%;
+	background-size: 100% 60%, 30% 100%;
 	border: 1px solid black;
 	display: inline-block;
 	border-radius: 5%; /* Make it round */
@@ -41,7 +40,7 @@ body {
 	margin: 0 auto;
 	position: relative; /* Add position relative */
 	bottom: -300px;
-	right: -300px;
+	right: -350px;
 }
 
 .txt_field {
@@ -80,12 +79,29 @@ button {
 	margin-top: 60px;
 	right: -150px;
 }
+@media (max-width: 1400px) and (min-width: 1201px) {
+	/* Styles for extra large devices */
+	.image-container{
+		background-color: blue;
+		background-size: 100% 50%, 35% 99%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -250px;
+	}
+	.Title{
+		top: 100px;
+		right: 200px;
+	}
+}
+
   /* Extra large devices (large desktops and high-res displays) */
-  @media (max-width: 1200px) and (min-width: 991px) {
+  @media (max-width: 1200px) and (min-width: 993px) {
 	/* Styles for extra large devices */
 	.image-container{
 		background-color: red;
-		background-size: 100% 50%, 30% 100%;
+		background-size:100% 60%, 40% 98%;
 		background-position: 0px 400px, -8px 20px;
 	}
 	.login-form{
@@ -98,49 +114,49 @@ button {
 	}
   }
 /* Large devices (laptops/desktops) */
-@media (max-width: 992px) and (min-width: 767px) {
+@media (max-width: 992px) and (min-width: 769px) {
 	/* Styles for large devices */
 	.image-container{
 		background-color: pink;
-		background-size: 100% 50%, 30% 100%;
+		background-size: 100% 60%, 50% 97%;
 		background-position: 0px 400px, -8px 20px;
 	}
 	.login-form{
 		bottom: -300px;
-		right: -150px;
-	}
-	.Title{
-		top: 100px;
-		right: 150px;
-	}
-}
-
-  
-  /* Medium devices (tablets) */
-  @media (max-width: 768px) and (min-width: 575px) {
-	/* Styles for medium devices */
-	.image-container{
-		background-color: yellow;
-		background-size: 100% 50%, 30% 100%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -100px;
+		right: -200px;
 	}
 	.Title{
 		top: 100px;
 		right: 100px;
 	}
 }
+
+  
+  /* Medium devices (tablets) */
+  @media (max-width: 768px) and (min-width: 577px) {
+	/* Styles for medium devices */
+	.image-container{
+		background-color: yellow;
+		background-size: 100% 60%, 60% 96%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -50px;
+	}
+	.Title{
+		top: 100px;
+		right: 180px;
+	}
+}
   
   
 /* Small devices (landscape phones) */
-@media (max-width: 576px) {
+@media (max-width: 576px){
 	/* Styles for small devices */
 	.image-container{
 		background-color: white;
-		background-size: 100% 50%, 30% 100%;
+		background-size: 100% 60%, 75% 95%;
 		background-position: 0px 400px, -8px 20px;
 	}
 	.login-form{
