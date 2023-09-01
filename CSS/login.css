@@ -118,7 +118,7 @@ button {
 	/* Styles for large devices */
 	.image-container{
 		background-color: pink;
-		background-size: 100% 60%, 50% 97%;
+		background-size: 100% 60%, 45% 97%;
 		background-position: 0px 400px, -8px 20px;
 	}
 	.login-form{
