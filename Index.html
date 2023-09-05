@@ -1,31 +1,34 @@
 <!DOCTYPE html>
-<html>
-    <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="CSS/login.css">
-		
-        <title>Login</title>
+<html lang="en" dir="ltr">
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	
+	<title> Login </title>
+	</head>
 
-    </head>
-    <body>
-        <div class="image-container">
-            <div class="Title">
-                <p>Dapper</p>
-                <p>Animal Monitoring System</p>
-            </div>
-            <form class="login-form">
-                <div class="txt_field">
-                    <input type="text" name="username" id="username" required>
-                    <label>Username</label>
-                </div>
-                <div class="txt_field">
-                    <input type="password" name="password" id="password" required>
-                    <label>Password</label>
-                </div>
-                <button type="button" id="submit" onclick="validate()">LOGIN</button>
-            </form>
+<body>
+<div class="image-container">
+    <div class="center">
+        <div class="Title">
+            <p>Dapper</p>
+            <p>Animal Monitoring System</p>
         </div>
-
+        <form method="post">
+            <div class="txt_field">
+                <input type="text" name="username" id="username" required>
+                <label>Username</label>
+            </div>
+            <div class="txt_field">
+                <input type="password" name="password" id="password" required>
+                <label>Password</label>
+            </div>
+            <button type="button" id="submit" onclick="validate()" onkeydown="if (event.key == 'Enter') validate();">LOGIN</button>
+        </form>
+    </div>
+</div>
         <script>
             var attempt = 3; // Variable to count the number of attempts.
         
@@ -58,6 +61,6 @@
                 }
             }
         </script>
-        
-    </body>
+</body>
+
 </html>

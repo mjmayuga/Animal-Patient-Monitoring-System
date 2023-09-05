@@ -1,0 +1,166 @@
+body {
+    display: flex;
+	justify-content: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #58da9d;
+}
+
+/* Styling for the sidebar */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    background-color: #1c6648;
+    color: #fff;
+    padding: 20px;
+
+}
+
+/* Styling for sidebar buttons */
+.sidebar button {
+    font-size: 18px;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #080808;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    margin-top: 50px;
+
+    /* Adjust button position manually */
+    position: relative; /* Use relative positioning for the button */
+    top: 20; /* Move the button down by 50% of its parent's height */
+    transform: translateY(-50%); /* Adjust to vertically center the button */
+}
+
+.sidebar button:hover {
+    background-color: #0a7237;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0;
+    
+}
+
+.container {
+    /* Container styling */
+    display: flex;
+	justify-content: center;
+    width: 1500px;
+    border: 1px solid #cccccc;
+    background-color: #247951;
+    height: 500px;
+    margin: 0;
+    margin-left: 150px;
+    margin-top: 100px;
+}
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+table {
+    background-color: #a0eec7;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Styling for Doctor label */
+.Doctor {
+    color: #080808;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 100px;
+    position: relative;
+    }
+.Doctor::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #080808;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+.Greet {
+    color: #080808;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 10px;
+    position: relative;
+    margin-bottom: 50px;
+    }
+
+.Overview {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 30px;
+    text-align: left; /* Align the search bar to the right */
+}
+
+.settings-icon {
+    position: absolute; /* Change to absolute positioning */
+    top: 20px; /* Move the icon to the top */
+    right: 30px;
+    width: 32px; /* Adjust icon width */
+    height: 32px; /* Adjust icon height */
+    cursor: pointer;
+}
+
+.box {
+    height: 250px;
+    width: 250px; /* Adjust the width of the boxes as needed */
+    margin: 100px;
+    margin-left: 0px;
+    margin-top: 120px;
+    border: 1px solid #999;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+    text-align: center;
+    display: inline-block; /* Make the boxes appear side by side */
+}
+
+       /* Style for the box content at the bottom */
+.box-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    color: black;
+    font-size: 30px;
+    background-color: #58da9d;
+    text-align: center;
+    margin: 0;
+}
