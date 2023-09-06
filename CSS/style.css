@@ -1,0 +1,209 @@
+.image-container {
+	width: 100%;
+	height: 750px;
+	max-width: 1500px;
+	background-image: url('../Photos/Swirl.png'), url('../Photos/Dog.png');
+	background-position: 0px 330px, -8px 20px;
+	background-repeat: no-repeat;
+	background-size: 100% 60%, 30% 100%;
+	border: 1px solid black;
+	display: inline-block;
+	border-radius: 5%; /* Make it round */
+	overflow: hidden; /* Clip the content to the rounded shape */
+	position: relative;
+	background-color: white;
+}
+
+.Title {
+	text-align: center;
+	position: relative;
+	font-family: Myriad Pro;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	background-color: rgb(28, 72, 29);
+}
+
+
+/* EDITED CODE STARTS HERE */
+.center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width:400px;
+background: white; 
+border-radius:10px;
+border: 3px solid #53b583;
+}
+
+
+.center form
+{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field
+{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input
+{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;    
+}
+
+.txt_field label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY (-50%);
+    pointer-events: none;
+    transition: .5s;
+    
+}
+
+.txt_field span::before
+{
+    content:'';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #2691d9; 
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label
+{
+    top: -10px;
+    color: #53b583;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before
+{
+    width: 100%;
+}
+
+
+button {
+	padding: 10px 20px;
+	background-color: transparent;
+	color: #53b583;
+	border: 3px solid #53b583;
+	border-radius: 5px;
+	cursor: pointer;
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	right: -100px;
+}
+
+
+@media (max-width: 1400px) and (min-width: 1201px) {
+	/* Styles for extra large devices */
+	.image-container{
+		background-color: blue;
+		background-size: 100% 50%, 35% 99%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -250px;
+	}
+	.Title{
+		text-align: center;
+	}
+}
+
+  /* Extra large devices (large desktops and high-res displays) */
+  @media (max-width: 1200px) and (min-width: 993px) {
+	/* Styles for extra large devices */
+	.image-container{
+		background-color: red;
+		background-size:100% 60%, 40% 98%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -200px;
+	}
+	.Title{
+		text-align: center;
+	}
+  }
+/* Large devices (laptops/desktops) */
+@media (max-width: 992px) and (min-width: 769px) {
+	/* Styles for large devices */
+	.image-container{
+		background-color: pink;
+		background-size: 100% 60%, 45% 97%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -200px;
+	}
+	.Title{
+		text-align: center;
+	}
+}
+
+  
+  /* Medium devices (tablets) */
+  @media (max-width: 768px) and (min-width: 577px) {
+	/* Styles for medium devices */
+	.image-container{
+		background-color: yellow;
+		background-size: 100% 60%, 60% 96%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: -50px;
+	}
+	.Title{
+		text-align: center;
+	}
+}
+  
+  
+/* Small devices (landscape phones) */
+@media (max-width: 576px){
+	/* Styles for small devices */
+	.image-container{
+		background-color: white;
+		background-size: 100% 60%, 75% 95%;
+		background-position: 0px 400px, -8px 20px;
+	}
+	.login-form{
+		bottom: -300px;
+		right: 0px;
+	}
+	.Title{
+		text-align: center;
+	}
+}
+/* EDITED CODE ENDS HERE */
+
