@@ -1,0 +1,141 @@
+﻿*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2{
+    color: #444;
+}
+
+h3{
+    margin-left: 10px;
+}
+
+.sidebar{
+    position: fixed;
+    background: #aabeb3;
+    width: 25vw ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .greet {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .doctor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li{
+    height: 5vh;
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li:hover{
+    background: white;
+    color: #bac9b4;
+}
+
+.container{
+    position: absolute;
+    right: 0;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.container .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .header .head {
+    position: fixed;
+     align-items: center;
+}
+
+.container .header .settings{
+    margin-left: 70vw;
+}
+
+.container .header .settings img{
+    width: 25px;
+    height: 25px;
+}
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+
+.container .content .cards{
+    position: fixed;
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card{
+    width: 75vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table {
+    width: 70vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding-left: 2em;
+}
+
+th {
+    text-align: center;
+    border-block-end: 1px solid #444;
+}
+
+td {
+    border-block-end: 1px solid #444;
+    padding: 8px;
+    margin-left: 15px;
+    text-align: center;
+}
