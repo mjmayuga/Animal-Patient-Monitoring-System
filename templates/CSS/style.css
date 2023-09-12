@@ -1,3 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
 .image-container {
 	width: 100%;
 	height: 750px;
@@ -28,11 +37,10 @@ body {
 	align-items: center;
 	height: 100vh;
 	margin: 0;
-	background-color: rgb(28, 72, 29);
+	background-color: #1c6648; /*<--------- to match the sidebars in line 236*/
+	min-height: 100vh;
 }
 
-
-/* EDITED CODE STARTS HERE */
 .center{
 position: absolute;
 top: 50%;
@@ -205,5 +213,194 @@ button {
 		text-align: center;
 	}
 }
-/* EDITED CODE ENDS HERE */
 
+
+/* EDITED CODE STARTS HERE */
+/* 	 previously dash.css   */
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2{
+    color: #ffffff;
+}
+
+.sidebar{
+    position: fixed;
+	top: 0;
+    left: 0;		/*<----- sidebar to move to the left*/
+    background: #1c6648;
+    width: 25vw ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .greet {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .doctor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li{
+    height: 5vh;
+    font-size: 24px;
+    padding: 10px 40px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li:hover{
+    background: white;
+    color: #55b32f;
+}
+
+.container{
+    position: absolute;
+    right: 0;
+    width: 75vw;
+    height: 100vh;
+	background: #f1f1f1;
+   
+}
+
+.container .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .header .head {
+    position: fixed;
+     align-items: center;
+}
+
+.container .header .settings{
+    margin-left: 70vw;
+}
+
+.container .header .settings img{
+    width: 25px;
+    height: 25px;
+}
+
+.container .content-dash{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+
+.container .content-dash .cards-dash{
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content-dash .cards-dash .card-dash{
+    width: 300px;
+    height: 200px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* 	 previously dash.css   */
+/*  EDITED CODE ENDS HERE  */
+
+
+/* EDITED CODE STARTS HERE */
+/* previously patients.css */
+
+h3{
+    margin-left: 10px;
+}
+
+.search-bar {
+	text-align: right; /* Align the search bar to the right */
+	margin-bottom: 10px;
+}
+
+.search-bar input[type="text"] {
+	padding: 8px; /* Adjust padding */
+	width: 200px; /* Adjust width */
+	height: 30px; /* Adjust height */
+	font-size: 14px; /* Adjust font size */
+	border-radius: 10px;
+}
+
+.container .content{
+    position: relative;
+    margin-top: 10vh;
+    min-height: 90vh;
+}
+
+.container .content .cards{
+    position: fixed;
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container .content .cards .card{
+    width: 75vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table {
+    width: 70vw;
+    border-collapse: collapse;
+	background-color: #a0eec7;
+    margin-top: 20px;
+    padding-left: 2em;
+}
+
+th, td {
+	border: 1px solid #ccc;
+	padding: 8px;
+	text-align: left;
+}
+
+
+/* previously patients.css */
+/*  EDITED CODE ENDS HERE  */
+
+
+/* EDITED CODE STARTS HERE */
+/*  previously collab.css  */
+
+
+
+/*  previously collab.css  */
+/*  EDITED CODE ENDS HERE  */
