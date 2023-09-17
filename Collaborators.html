@@ -4,66 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="CSS/collab.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/style.css" />
     <title>Collaborations</title>
 </head>
-<style>
-body{
-    min-height: 100vh;
-}
-
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-
-h1,h2{
-    color: #444;
-}
-
-h3{
-    margin-left: 10px;
-}
-
-.sidebar{
-    position: fixed;
-    background: #aabeb3;
-    width: 25vw ;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.sidebar .greet {
-    height: 8vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar .doctor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.sidebar li{
-    height: 10vh;
-    font-size: 24px;
-    padding: 10px 20px;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar li:hover{
-    background: white;
-    color: #bac9b4;
-}
-</style>
 <body>
     <div class="sidebar">
         <div class="greet">
@@ -81,10 +24,10 @@ h3{
         </ul>
     </div>
 
-    <div class="container">
+    <div class="con">
         <div class="header">
             <div class="head">
-                <h2>Dapper Animal Patient Monitoring System</h2>
+                <h3>Dapper Animal Patient Monitoring System</h3>
             </div>
             <div class="settings">
                 <button onclick="admin ()"><img src="Photos/Settings.png" alt="Settings Icon" /></button>
@@ -95,48 +38,52 @@ h3{
                 </script>
             </div>
         </div>
+    </div>
 
-        <div class="content">
-            <div class="cards">
-                <div class="card">
-                    <div class="box">
-                        <div class="Collaborators">
-                            <br />
-                            <h3>Past Collaborations</h3>
-                            <div class="search">
+    <div class="collab">
+        <div class="container">
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <div class="Collaborators">
+                                <br />
+                                <h3>Past Collaborations</h3>
+                                <div class="search">
 
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Age</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>30</td>
+                                            <td>2023-08-15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Smith</td>
+                                            <td>25</td>
+                                            <td>2023-07-20</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Age</th>
-                                        <th>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>John Doe</td>
-                                        <td>30</td>
-                                        <td>2023-08-15</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jane Smith</td>
-                                        <td>25</td>
-                                        <td>2023-07-20</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>

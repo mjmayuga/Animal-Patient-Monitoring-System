@@ -1,209 +1,343 @@
-.image-container {
-	width: 100%;
-	height: 750px;
-	max-width: 1500px;
-	background-image: url('../Photos/Swirl.png'), url('../Photos/Dog.png');
-	background-position: 0px 330px, -8px 20px;
-	background-repeat: no-repeat;
-	background-size: 100% 60%, 30% 100%;
-	border: 1px solid black;
-	display: inline-block;
-	border-radius: 5%; /* Make it round */
-	overflow: hidden; /* Clip the content to the rounded shape */
-	position: relative;
-	background-color: white;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
-
-.Title {
-	text-align: center;
-	position: relative;
-	font-family: Myriad Pro;
-	font-size: 20px;
-	font-weight: bold;
-}
-
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
-	background-color: rgb(28, 72, 29);
-}
-
 
 /* EDITED CODE STARTS HERE */
-.center{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width:400px;
-background: white; 
-border-radius:10px;
-border: 3px solid #53b583;
+/* previously Login */
+
+/* previously Login */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously OnGoing */
+
+/* previously Ongoing */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/*  previously sidebar  */
+body {
+	min-height: 100vh;
 }
 
-
-.center form
-{
-    padding: 0 40px;
-    box-sizing: border-box;
+a {
+	text-decoration: none;
 }
 
-form .txt_field
-{
+li {
+	list-style: none;
+}
+
+h1, h2 {
+	color: #444;
+}
+
+.sidebar {
+	position: fixed;
+	background: #aabeb3;
+	width: 25vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar .greet {
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar .doctor {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.sidebar li {
+	height: 10vh;
+	font-size: 24px;
+	padding: 10px 20px;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+
+.sidebar li:hover {
+	background: white;
+	color: #bac9b4;
+}
+
+.con {
+    position: fixed;
+    right: 0;
+    width: 75vw;
+    height: 10vh;
+    background: #f1f1f1;
+}
+
+.con .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.con .header .head {
+    position: fixed;
+    align-items: center
+}
+
+.con .header .settings {
+    margin-left: 70vw;
+}
+
+.con .header .settings img {
+    width: 25px;
+    height: 25px;
+}
+/* previously sidebar */
+/*  EDITED CODE ENDS HERE  */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* 	 previously Dashboard   */
+.dash .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.dash .container .content{
     position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+    margin-top: 10vh;
+    min-height: 90vh;
 }
 
-.txt_field input
-{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;    
+.dash .container .content .cards{
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.txt_field label
-{
+.dash .container .content .cards .card{
+    width: 300px;
+    height: 200px;
+    background: white;
+    margin: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* 	 previously Dashboard   */
+/*  EDITED CODE ENDS HERE  */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously AllPatients */
+.all .container {
     position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY (-50%);
-    pointer-events: none;
-    transition: .5s;
-    
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
 }
 
-.txt_field span::before
-{
-    content:'';
+.all .container .content{
+    position: relative;
+    margin-top: 2px;
+    min-height: 90vh;
+}
+
+.all .container .content .cards{
+    position: fixed;
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.all .container .content .cards .card{
+    width: 75vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+table {
+    width: 70vw;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding-left: 2em;
+}
+
+th {
+    text-align: center;
+    border-block-end: 1px solid #444;
+}
+
+td {
+    border-block-end: 1px solid #444;
+    padding: 8px;
+    margin-left: 15px;
+    text-align: center;
+}
+/* previously AllPatients */
+/*  EDITED CODE ENDS HERE  */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/*  previously Collaborators */
+.collab .container {
     position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: #2691d9; 
-    transition: .5s;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
 }
 
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label
-{
-    top: -10px;
-    color: #53b583;
+.collab .container .content{
+    position: relative;
+    margin-top: 2px;
+    min-height: 90vh;
 }
 
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before
-{
+.collab .container .content .cards{
+    position: fixed;
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.collab .container .content .cards .card{
+    width: 75vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* previously Collaborators */
+/*  EDITED CODE ENDS HERE  */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously Settings */
+
+.set .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.set .container .content{
+    position: relative;
+    margin-top: 2px;
+    min-height: 90vh;
+}
+
+.user-form h2,
+.user-list h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.user-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+label,
+select,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+input[type="password"] {
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
+#expirationDateDiv {
+    display: none;
+}
 
 button {
-	padding: 10px 20px;
-	background-color: transparent;
-	color: #53b583;
-	border: 3px solid #53b583;
-	border-radius: 5px;
-	cursor: pointer;
-	position: relative;
-	margin-top: 60px;
-	margin-bottom: 20px;
-	right: -100px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-
-@media (max-width: 1400px) and (min-width: 1201px) {
-	/* Styles for extra large devices */
-	.image-container{
-		background-color: blue;
-		background-size: 100% 50%, 35% 99%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -250px;
-	}
-	.Title{
-		text-align: center;
-	}
+button:hover {
+    background-color: #0056b3;
 }
 
-  /* Extra large devices (large desktops and high-res displays) */
-  @media (max-width: 1200px) and (min-width: 993px) {
-	/* Styles for extra large devices */
-	.image-container{
-		background-color: red;
-		background-size:100% 60%, 40% 98%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -200px;
-	}
-	.Title{
-		text-align: center;
-	}
-  }
-/* Large devices (laptops/desktops) */
-@media (max-width: 992px) and (min-width: 769px) {
-	/* Styles for large devices */
-	.image-container{
-		background-color: pink;
-		background-size: 100% 60%, 45% 97%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -200px;
-	}
-	.Title{
-		text-align: center;
-	}
+.user-list ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-  
-  /* Medium devices (tablets) */
-  @media (max-width: 768px) and (min-width: 577px) {
-	/* Styles for medium devices */
-	.image-container{
-		background-color: yellow;
-		background-size: 100% 60%, 60% 96%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -50px;
-	}
-	.Title{
-		text-align: center;
-	}
+.user-list ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
 }
-  
-  
-/* Small devices (landscape phones) */
-@media (max-width: 576px){
-	/* Styles for small devices */
-	.image-container{
-		background-color: white;
-		background-size: 100% 60%, 75% 95%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: 0px;
-	}
-	.Title{
-		text-align: center;
-	}
-}
+    
+/* previously Settings */
 /* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously admin-sidebar */
+
+/* previously admin-sidebar */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
 
