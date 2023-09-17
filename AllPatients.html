@@ -7,6 +7,63 @@
     <link rel="stylesheet" type="text/css" href="CSS/patients.css">
     <title>Patients</title>
 </head>
+<style>
+    body{
+    min-height: 100vh;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+h1,h2{
+    color: #444;
+}
+
+h3{
+    margin-left: 10px;
+}
+
+.sidebar{
+    position: fixed;
+    background: #aabeb3;
+    width: 25vw ;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .greet {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .doctor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar li{
+    height: 10vh;
+    font-size: 24px;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li:hover{
+    background: white;
+    color: #bac9b4;
+}
+</style>
 <body>
     <div class="sidebar">
         <div class="greet">
@@ -17,10 +74,10 @@
         </div>
         <br />
         <ul>
-            <li>Dashboard</li>
-            <li>Patients</li>
-            <li>Collaborator</li>
-            <li>On Going Patient</li>
+            <li><img src="Photos/dashboard.png" alt="Dashboard" />Dashboard</li>
+            <li><img src="Photos/patients.png" alt="Patients" />Patients</li>
+            <li><img src="Photos/collab.png" alt="Collaborators" />Collaborator</li>
+            <li><img src="Photos/stat.png" alt="On Going Patient" />On Going Patient</li>
         </ul>
     </div>
 
@@ -30,7 +87,12 @@
                 <h2>Dapper Animal Patient Monitoring System</h2>
             </div>
             <div class="settings">
-                <img src="Photos/Settings.png" alt="Settings Icon" />
+                <button onclick="admin ()"><img src="Photos/Settings.png" alt="Settings Icon" /></button>
+                <script>
+                    function admin() {
+                        window.location.href = "Settings.html";
+                    }
+                </script>
             </div>
         </div>
 
