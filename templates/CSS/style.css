@@ -5,279 +5,174 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* EDITED CODE STARTS HERE */
+/* previously Login */
 
-
-.image-container {
-	width: 100%;
-	height: 750px;
-	max-width: 1500px;
-	background-image: url('../Photos/Swirl.png'), url('../Photos/Dog.png');
-	background-position: 0px 330px, -8px 20px;
-	background-repeat: no-repeat;
-	background-size: 100% 60%, 30% 100%;
-	border: 1px solid black;
-	display: inline-block;
-	border-radius: 5%; /* Make it round */
-	overflow: hidden; /* Clip the content to the rounded shape */
-	position: relative;
-	background-color: white;
+.contain{
+    position: absolute;
+    right: 0;
+    width: 100vw;
+    height: 100vh;;
+	background: #aabeb3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Title {
-	text-align: center;
-	position: relative;
-	font-family: Myriad Pro;
-	font-size: 20px;
-	font-weight: bold;
+.contain .pop{
+    width: 85vw;
+    height: 70vh;
+    background: rgb(253, 253, 253);
+    display: grid;
+    grid-template-columns: repeat(2, 50vw);
+    justify-content: center;
 }
 
+.contain .pop .img {
+    margin-left: 10vh;
+    display: flex;
+    justify-content: flex-end;
+    justify-content: flex-start;
+}
+
+
+.contain .pop .img img{
+    width: 370px;
+}
+
+.login-container{
+    display: flex;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.login-container .form-group{
+    text-align: left;
+}
+/* previously Login */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously OnGoing */
+.nav{
+    position: fixed;
+    right: 0;
+    width: 100vw;
+    height: 10vh;
+    background: #f1f1f1;
+}
+
+.nav .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 10vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.nav .header .head {
+    position: fixed;
+    align-items: center;
+}
+
+.nav .header .back {
+    margin-right: 85vw;
+}
+
+.bg{
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 100vw;
+    height: 100vh;;
+	background: #aabeb3;
+    display: flex;
+    justify-content: center;
+}
+
+.monitor{
+    margin-top: 20px;
+    width: 95vw;
+    height: 80vh;
+    background: rgb(0, 0, 0);
+}
+
+
+/* previously Ongoing */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/*  previously sidebar  */
 body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
-	background-color: #1c6648; /*<--------- to match the sidebars in line 236*/
 	min-height: 100vh;
 }
 
-.center{
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width:400px;
-background: white; 
-border-radius:10px;
-border: 3px solid #53b583;
+a {
+	text-decoration: none;
 }
 
-
-.center form
-{
-    padding: 0 40px;
-    box-sizing: border-box;
+li {
+	list-style: none;
 }
 
-form .txt_field
-{
-    position: relative;
-    border-bottom: 2px solid #adadad;
-    margin: 30px 0;
+h1, h2 {
+	color: #444;
 }
 
-.txt_field input
-{
-    width: 100%;
-    padding: 0 5px;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;    
-}
-
-.txt_field label
-{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    color: #adadad;
-    transform: translateY (-50%);
-    pointer-events: none;
-    transition: .5s;
-    
-}
-
-.txt_field span::before
-{
-    content:'';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: #2691d9; 
-    transition: .5s;
-}
-
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label
-{
-    top: -10px;
-    color: #53b583;
-}
-
-.txt_field input:focus ~ span::before,
-.txt_field input:valid ~ span::before
-{
-    width: 100%;
-}
-
-
-button {
-	padding: 10px 20px;
-	background-color: transparent;
-	color: #53b583;
-	border: 3px solid #53b583;
-	border-radius: 5px;
-	cursor: pointer;
-	position: relative;
-	margin-top: 60px;
-	margin-bottom: 20px;
-	right: -100px;
-}
-
-
-@media (max-width: 1400px) and (min-width: 1201px) {
-	/* Styles for extra large devices */
-	.image-container{
-		background-color: blue;
-		background-size: 100% 50%, 35% 99%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -250px;
-	}
-	.Title{
-		text-align: center;
-	}
-}
-
-  /* Extra large devices (large desktops and high-res displays) */
-  @media (max-width: 1200px) and (min-width: 993px) {
-	/* Styles for extra large devices */
-	.image-container{
-		background-color: red;
-		background-size:100% 60%, 40% 98%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -200px;
-	}
-	.Title{
-		text-align: center;
-	}
-  }
-/* Large devices (laptops/desktops) */
-@media (max-width: 992px) and (min-width: 769px) {
-	/* Styles for large devices */
-	.image-container{
-		background-color: pink;
-		background-size: 100% 60%, 45% 97%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -200px;
-	}
-	.Title{
-		text-align: center;
-	}
-}
-
-  
-  /* Medium devices (tablets) */
-  @media (max-width: 768px) and (min-width: 577px) {
-	/* Styles for medium devices */
-	.image-container{
-		background-color: yellow;
-		background-size: 100% 60%, 60% 96%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: -50px;
-	}
-	.Title{
-		text-align: center;
-	}
-}
-  
-  
-/* Small devices (landscape phones) */
-@media (max-width: 576px){
-	/* Styles for small devices */
-	.image-container{
-		background-color: white;
-		background-size: 100% 60%, 75% 95%;
-		background-position: 0px 400px, -8px 20px;
-	}
-	.login-form{
-		bottom: -300px;
-		right: 0px;
-	}
-	.Title{
-		text-align: center;
-	}
-}
-
-
-/* EDITED CODE STARTS HERE */
-/* 	 previously dash.css   */
-
-a{
-    text-decoration: none;
-}
-
-li{
-    list-style: none;
-}
-
-h1,h2{
-    color: #ffffff;
-}
-
-.sidebar{
-    position: fixed;
-	top: 0;
-    left: 0;		/*<----- sidebar to move to the left*/
-    background: #1c6648;
-    width: 25vw ;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+.sidebar {
+	position: fixed;
+	background: #aabeb3;
+	width: 25vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .sidebar .greet {
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .sidebar .doctor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.sidebar li{
-    height: 5vh;
-    font-size: 24px;
-    padding: 10px 40px;
-    color: white;
-    display: flex;
-    align-items: center;
+.sidebar li {
+	height: 10vh;
+	font-size: 24px;
+	padding: 10px 20px;
+	color: white;
+	display: flex;
+	align-items: center;
 }
 
-.sidebar li:hover{
-    background: white;
-    color: #55b32f;
+.sidebar li:hover {
+	background: white;
+	color: #bac9b4;
 }
 
-.container{
-    position: absolute;
+.con {
+    position: fixed;
     right: 0;
     width: 75vw;
-    height: 100vh;
-	background: #f1f1f1;
-   
+    height: 10vh;
+    background: #f1f1f1;
 }
 
-.container .header {
+.con .header {
     position: fixed;
     top: 0;
     right: 0;
@@ -290,27 +185,42 @@ h1,h2{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.container .header .head {
+.con .header .head {
     position: fixed;
-     align-items: center;
+    align-items: center
 }
 
-.container .header .settings{
+.con .header .settings {
     margin-left: 70vw;
 }
 
-.container .header .settings img{
+.con .header .settings img {
     width: 25px;
     height: 25px;
 }
+/* previously sidebar */
+/*  EDITED CODE ENDS HERE  */
 
-.container .content-dash{
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* 	 previously Dashboard   */
+.dash .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.dash .container .content{
     position: relative;
     margin-top: 10vh;
     min-height: 90vh;
 }
 
-.container .content-dash .cards-dash{
+.dash .container .content .cards{
     padding: 20px 15px;
     display:flex;
     align-items: center;
@@ -318,7 +228,7 @@ h1,h2{
     flex-wrap: wrap;
 }
 
-.container .content-dash .cards-dash .card-dash{
+.dash .container .content .cards .card{
     width: 300px;
     height: 200px;
     background: white;
@@ -328,38 +238,29 @@ h1,h2{
     justify-content: space-around;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* 	 previously dash.css   */
+/* 	 previously Dashboard   */
 /*  EDITED CODE ENDS HERE  */
 
+                /* ------------------------------------------------------------------- */
 
 /* EDITED CODE STARTS HERE */
-/* previously patients.css */
-
-h3{
-    margin-left: 10px;
+/* previously AllPatients */
+.all .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
 }
 
-.search-bar {
-	text-align: right; /* Align the search bar to the right */
-	margin-bottom: 10px;
-}
-
-.search-bar input[type="text"] {
-	padding: 8px; /* Adjust padding */
-	width: 200px; /* Adjust width */
-	height: 30px; /* Adjust height */
-	font-size: 14px; /* Adjust font size */
-	border-radius: 10px;
-}
-
-.container .content{
+.all .container .content{
     position: relative;
-    margin-top: 10vh;
+    margin-top: 2px;
     min-height: 90vh;
 }
 
-.container .content .cards{
+.all .container .content .cards{
     position: fixed;
     padding: 20px 15px;
     display:flex;
@@ -368,7 +269,7 @@ h3{
     flex-wrap: wrap;
 }
 
-.container .content .cards .card{
+.all .container .content .cards .card{
     width: 75vw;
     min-height: 100vh;
     background: white;
@@ -381,26 +282,151 @@ h3{
 table {
     width: 70vw;
     border-collapse: collapse;
-	background-color: #a0eec7;
     margin-top: 20px;
     padding-left: 2em;
 }
 
-th, td {
-	border: 1px solid #ccc;
-	padding: 8px;
-	text-align: left;
+th {
+    text-align: center;
+    border-block-end: 1px solid #444;
 }
 
-
-/* previously patients.css */
+td {
+    border-block-end: 1px solid #444;
+    padding: 8px;
+    margin-left: 15px;
+    text-align: center;
+}
+/* previously AllPatients */
 /*  EDITED CODE ENDS HERE  */
 
+                /* ------------------------------------------------------------------- */
 
 /* EDITED CODE STARTS HERE */
-/*  previously collab.css  */
+/*  previously Collaborators */
+.collab .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
 
+.collab .container .content{
+    position: relative;
+    margin-top: 2px;
+    min-height: 90vh;
+}
 
+.collab .container .content .cards{
+    position: fixed;
+    padding: 20px 15px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
 
-/*  previously collab.css  */
+.collab .container .content .cards .card{
+    width: 75vw;
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/* previously Collaborators */
 /*  EDITED CODE ENDS HERE  */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously Settings */
+
+.set .container {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    width: 75vw;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+.set .container .content{
+    position: relative;
+    margin-top: 2px;
+    min-height: 90vh;
+}
+
+.user-form h2,
+.user-list h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.user-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+label,
+select,
+input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select,
+input[type="text"],
+input[type="date"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#expirationDateDiv {
+    display: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.user-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+    
+/* previously Settings */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+
+/* EDITED CODE STARTS HERE */
+/* previously admin-sidebar */
+
+/* previously admin-sidebar */
+/* EDITED CODE ENDS HERE */
+
+                /* ------------------------------------------------------------------- */
+

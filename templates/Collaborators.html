@@ -17,67 +17,73 @@
         </div>
         <br />
         <ul>
-            <li>Dashboard</li>
-            <li>Patients</li>
-            <li>Collaborator</li>
-            <li>On Going Patient</li>
+            <li><img src="Photos/dashboard.png" alt="Dashboard" />Dashboard</li>
+            <li><img src="Photos/patients.png" alt="Patients" />Patients</li>
+            <li><img src="Photos/collab.png" alt="Collaborators" />Collaborator</li>
+            <li><img src="Photos/stat.png" alt="On Going Patient" />On Going Patient</li>
         </ul>
     </div>
 
-    <div class="container">
+    <div class="con">
         <div class="header">
             <div class="head">
                 <h3>Dapper Animal Patient Monitoring System</h3>
             </div>
             <div class="settings">
-                <img src="Photos/Settings.png" alt="Settings Icon" />
+                <button onclick="admin ()"><img src="Photos/Settings.png" alt="Settings Icon" /></button>
+                <script>
+                    function admin() {
+                        window.location.href = "Settings.html";
+                    }
+                </script>
             </div>
         </div>
+    </div>
 
-        <div class="content">
-            <div class="cards">
-                <div class="card">
-                    <div class="box">
-                        <div class="Collaborators">
-                            <br />
-                            <div class="search-bar">
-                                <input type="text" placeholder="Search...">
-                            </div>
-                            <h3>Past Collaborations</h3>
-                            <div class="search">
+    <div class="collab">
+        <div class="container">
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <div class="Collaborators">
+                                <br />
+                                <h3>Past Collaborations</h3>
+                                <div class="search">
 
+                                </div>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Age</th>
+                                            <th>Date</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John Doe</td>
+                                            <td>30</td>
+                                            <td>2023-08-15</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jane Smith</td>
+                                            <td>25</td>
+                                            <td>2023-07-20</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Name</th>
-                                        <th>Age</th>
-                                        <th>Date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>John Doe</td>
-                                        <td>30</td>
-                                        <td>2023-08-15</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Jane Smith</td>
-                                        <td>25</td>
-                                        <td>2023-07-20</td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
                         </div>
                     </div>
                 </div>

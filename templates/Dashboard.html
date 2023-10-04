@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="CSS/style.css">
     <title>Dashboard</title>
 </head>
+
 <body>
     <div class="sidebar">
         <div class="greet">
@@ -17,50 +18,60 @@
         </div>
         <br />
         <ul>
-            <li>Dashboard</li>
-            <li>Patients</li>
-            <li>Collaborator</li>
-            <li>On Going Patient</li>
+            <li><img src="Photos/dashboard.png" alt="Dashboard" />Dashboard</li>
+            <li><img src="Photos/patients.png" alt="Patients" />Patients</li>
+            <li><img src="Photos/collab.png" alt="Collaborators" />Collaborator</li>
+            <li><img src="Photos/stat.png" alt="On Going Patient" />On Going Patient</li>
         </ul>
     </div>
 
-    <div class="container">
+    <div class="con">
         <div class="header">
             <div class="head">
                 <h3>Dapper Animal Patient Monitoring System</h3>
             </div>
             <div class="settings">
-                <img src="Photos/Settings.png" alt="Settings Icon" />
+                <button onclick="admin ()"><img src="Photos/Settings.png" alt="Settings Icon" /></button>
+                <script>
+                    function admin() {
+                        window.location.href = "Settings.html";
+                    }
+                </script>
             </div>
         </div>
+    </div>
 
-        <div class="content-dash">
-            <div class="cards-dash">
-                <div class="card-dash">
-                    <div class="box">
-                        <h1>23</h1>
-                        <h3>New Patients</h3>
+
+    <div class="dash">
+        <div class="container">
+            <div class="content">
+                <div class="cards">
+                    <div class="card">
+                        <div class="box">
+                            <h1>23</h1>
+                            <h3>New Patients</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="Photos/new.png" />
+                        </div>
                     </div>
-                    <div class="icon-case">
-                        <img src="Photos/new.png" />
+                    <div class="card">
+                        <div class="box">
+                            <h1>43</h1>
+                            <h3>Monthly Patients</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="Photos/patients.png" />
+                        </div>
                     </div>
-                </div>
-                <div class="card-dash">
-                    <div class="box">
-                        <h1>43</h1>
-                        <h3>Monthly Patients</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="Photos/new.png" />
-                    </div>
-                </div>
-                <div class="card-dash">
-                    <div class="box-dash">
-                        <h1>3</h1>
-                        <h3>Collaborators</h3>
-                    </div>
-                    <div class="icon-case">
-                        <img src="Photos/new.png" />
+                    <div class="card">
+                        <div class="box">
+                            <h1>3</h1>
+                            <h3>Collaborators</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="Photos/collab.png" />
+                        </div>
                     </div>
                 </div>
             </div>
