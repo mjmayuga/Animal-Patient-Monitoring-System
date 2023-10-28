@@ -8,12 +8,14 @@
     <title>On Going</title>
 </head>
 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+
 <body>
 
     <div class="nav">
         <div class="header">
             <div class="head">
-                <h3>Dapper Animal Patient Monitoring System</h3>
+                <h2>Dapper Animal Patient Monitoring System</h2>
             </div>
 
             <div class="back">
@@ -24,17 +26,136 @@
                     }
                 </script>
             </div>
+
+            <button onclick="window.print()"><h3>Print</h3></button>
+
         </div>
     </div>
 
     <div class="bg">
         <div class="monitor">
-            <div class="graph">
 
+            <div class="line">
+                <div class="graph">
+                    <canvas id="ecg-heart-rate" width="950" height="150"></canvas>
+                </div>
+    
+                <!-- Second ECG graph for Core Temperature -->
+                <div class="graph">
+                    <canvas id="ecg-core-temp" width="950" height="150"></canvas>
+                </div>
+    
+                <!-- Third ECG graph for Respiratory Rate -->
+                <div class="graph">
+                    <canvas id="ecg-respiratory-rate" width="950" height="150"></canvas>
+                </div>
             </div>
+
+            <div class="lbl">
+                <div class="vital">
+                    <h3>Heart Rate</h3>
+                    <br />
+                    <br />
+                    <p id="heart-rate">80 BPM</p>
+                </div>
+    
+                <div class="vital">
+                    <h3>Respiratory Rate</h3>
+                    <br />
+                    <br />
+                    <p id="respiratory-rate">20 BPM</p>
+                </div>
+    
+                <div class="vital">
+                    <h3>Core Temperature</h3>
+                    <br />
+                    <br />
+                    <p id="core-temp">38°C</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
+    <script>
+        // Function to generate random heart rate data
+        function generateHeartRateData() {
+            return Math.floor(Math.random() * (120 - 60 + 1)) + 60; // Random heart rate between 60 and 120 BPM
+        }
+
+        // Function to generate random core temperature data
+        function generateCoreTempData() {
+            return (Math.random() * (39.5 - 36.5)) + 36.5; // Random core temperature between 36.5°C and 39.5°C
+        }
+
+        // Function to generate random respiratory rate data
+        function generateRespiratoryRateData() {
+            return Math.floor(Math.random() * (30 - 10 + 1)) + 10; // Random respiratory rate between 10 and 30 BPM
+        }
+
+        // Function to update heart rate and draw the ECG graph
+        function updateHeartRateAndECG() {
+            const heartRate = generateHeartRateData();
+            document.getElementById("heart-rate").textContent = `${heartRate} BPM`;
+            
+            const ecgData = generateECGData();
+            drawECG("ecg-heart-rate", ecgData);
+        }
+
+        // Function to update core temperature and draw the ECG graph
+        function updateCoreTempAndECG() {
+            const coreTemp = generateCoreTempData();
+            document.getElementById("core-temp").textContent = `${coreTemp.toFixed(1)}°C`;
+            
+            const ecgData = generateECGData();
+            drawECG("ecg-core-temp", ecgData);
+        }
+
+        // Function to update respiratory rate and draw the ECG graph
+        function updateRespiratoryRateAndECG() {
+            const respiratoryRate = generateRespiratoryRateData();
+            document.getElementById("respiratory-rate").textContent = `${respiratoryRate} BPM`;
+            
+            const ecgData = generateECGData();
+            drawECG("ecg-respiratory-rate", ecgData);
+        }
+
+        // Function to draw the ECG graph for a specific canvas
+        function drawECG(canvasId, data) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext("2d");
+            
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.beginPath();
+            ctx.moveTo(0, canvas.height / 2);
+
+            for (let i = 0; i < data.length; i++) {
+                const x = (i / data.length) * canvas.width;
+                const y = (1 - (data[i] / 100)) * canvas.height;
+
+                ctx.lineTo(x, y);
+            }
+
+            ctx.strokeStyle = "#007BFF";
+            ctx.lineWidth = 2;
+            ctx.stroke();
+        }
+
+        // Example data (you can replace this with real data)
+        function generateECGData() {
+            const ecgData = [];
+            for (let i = 0; i <= 11; i++) {
+                const value = Math.floor(Math.random() * 100); // Random ECG value between 0 and 100
+                ecgData.push(value);
+            }
+            return ecgData;
+        }
+
+        // Start simulating and updating every second
+        setInterval(updateHeartRateAndECG, 1000);
+        setInterval(updateCoreTempAndECG, 1000);
+        setInterval(updateRespiratoryRateAndECG, 1000);
+    </script>
 
 </body>
 </html>
