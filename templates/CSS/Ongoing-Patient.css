@@ -1,5 +1,5 @@
 body {
-    background-color: #58da9d;
+    background-color: #f1f1f1;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@ body {
 }
 
 .container-xxl{
-    background-color: green;
+    background-color: #f1f1f1;
     margin-left: 20%;
     margin-top: 5%;
     display: flex;
